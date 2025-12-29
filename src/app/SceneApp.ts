@@ -35,6 +35,8 @@ export class SceneApp {
 		this.scene.add(this.cubeMesh.root);
 		this.animator = new TurnAnimator(this.cubeMesh.root);
 
+    this.cubeMesh.syncFromState(this.cubeState);
+
 		window.addEventListener("resize", () => this.onResize());
 		this.bindKeyboard();
 	}
